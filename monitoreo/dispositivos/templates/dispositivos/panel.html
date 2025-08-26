@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de dispositivos</title>
+</head>
+<body>
+<h1>Panel de dispositivos</h1>
+<h3>Consumo máximo permitido: {{ consumo_maximo }} W</h3>
+
+<ul>
+    {% for d in dispositivos %}
+        <li style="color: {{ d.color }}">
+            {{ d.nombre }} - {{ d.consumo }} W - {{ d.estado }}
+        </li>
+    {% endfor %}
+</ul>
+
+<p>Total en estado crítico/Exceso: {{ estado_critico }}</p>
+</body>
+</html>
